@@ -112,8 +112,8 @@ export class Trend {
   mapValuesToDates(values: any[]) {
     const vals = values.map((value) => {
       return {
-        aggregate: Number(value["$extras"].aggregate ?? value.aggregate ?? 0),
-        date: value["$extras"][this.#dateAlias] ?? value[this.#dateAlias],
+        aggregate: Number(value.aggregate ?? value["$extras"].aggregate ?? 0),
+        date: value[this.#dateAlias] ?? value["$extras"][this.#dateAlias],
       };
     });
 
