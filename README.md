@@ -33,6 +33,10 @@ await Trend.query(User.query().whereNotNull("email_verified_at"))
   .average("weight");
 ```
 
+## Credits
+
+- based on [Flowframe/laravel-trend](https://github.com/Flowframe/laravel-trend) package.
+
 ## License
 
 Published under the [MIT](https://github.com/KABBOUCHI/adonisjs-trend/blob/main/LICENSE) license.
