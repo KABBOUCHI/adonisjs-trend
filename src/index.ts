@@ -81,7 +81,7 @@ export class Trend {
   }
 
   avg(column: string) {
-    return this.aggregate(column, "av");
+    return this.aggregate(column, "avg");
   }
 
   average(column: string) {
