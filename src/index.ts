@@ -2,6 +2,7 @@ import type {
   LucidModel,
   ModelQueryBuilderContract,
 } from "@adonisjs/lucid/types/model";
+import type { DatabaseQueryBuilderContract } from "@adonisjs/lucid/types/querybuilder";
 
 import { DateTime, Duration, Interval } from "luxon";
 import db from "@adonisjs/lucid/services/db";
@@ -13,13 +14,17 @@ export class Trend {
   #dateColumn = "created_at";
   #dateAlias = "date";
 
-  constructor(public builder: ModelQueryBuilderContract<any, any>) {}
+  constructor(
+    public builder:
+      | DatabaseQueryBuilderContract<any>
+      | ModelQueryBuilderContract<any, any>,
+  ) {}
 
   static model(model: LucidModel) {
     return new this(model.query());
   }
 
-  static query(builder: ModelQueryBuilderContract<any, any>) {
+  static query(builder: DatabaseQueryBuilderContract<any>) {
     return new this(builder);
   }
 
