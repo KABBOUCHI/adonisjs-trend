@@ -80,6 +80,14 @@ export class Trend {
     return this.mapValuesToDates(values);
   }
 
+  avg(column: string) {
+    return this.aggregate(column, "av");
+  }
+
+  average(column: string) {
+    return this.avg(column);
+  }
+
   min(column: string) {
     return this.aggregate(column, "min");
   }
