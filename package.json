@@ -1,6 +1,6 @@
 {
   "name": "adonisjs-trend",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate trends for your models. Easily generate charts or reports.",
   "repository": "KABBOUCHI/adonisjs-trend",
   "author": "Georges KABBOUCHI <georges.kabbouchi@gmail.com>",
@@ -44,7 +44,7 @@
     "unbuild": "^3.0.0-rc.7"
   },
   "peerDependencies": {
-    "@adonisjs/lucid": "^20.4.0",
+    "@adonisjs/lucid": "^21.3.0",
     "luxon": "^3.4.4"
   },
   "packageManager": "pnpm@9.7.0"
